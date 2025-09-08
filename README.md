@@ -5,12 +5,6 @@ This Repository is Mainly focused on DevOps tools and its requirements.
 
 Welcome to my DevOps learning journey! This repository contains notes, code snippets, configurations, and mini-projects as I explore various DevOps tools and practices.
 
-## 📅 Started On
-
-`September 2025`
-
----
-
 ## 📌 Topics Covered
 
 1. 🐧 **Linux & Shell Scripting**
