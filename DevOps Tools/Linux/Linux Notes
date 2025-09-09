@@ -1,1 +1,53 @@
-#Linux Notes, Commands
+#Essential commands for Linux.
+
+Package Management: 
+Debian/Ubuntu (APT-based):
+sudo apt update              # Update package list
+sudo apt upgrade             # Upgrade packages
+sudo apt install htop        # Install package
+sudo apt remove package      # Remove package
+
+RHEL/CentOS (YUM/DNF-based):
+sudo yum update              # Update system
+sudo yum install htop        # Install package
+sudo yum remove package      # Remove package
+df -h                  # Disk usage
+du -sh /var/log        # Size of directory
+
+System Monitoring & Information
+uname -a                # Full system info
+hostname                # Show hostname
+uptime                  # System uptime
+top                     # Real-time process monitoring
+htop                    # Enhanced 'top' (if installed)
+free -m                 # Memory usage (in MB)
+df -h                   # Disk space usage
+du -sh *                # Size of files/directories in current dir
+vmstat 1                # CPU and memory statistics
+lscpu                   # CPU architecture info
+lsblk                   # Block devices
+who                     # Who is logged in
+
+File and Directory Operations
+ls -lah                 # List all files with human-readable sizes
+cd /path/to/dir         # Change directory
+pwd                     # Print working directory
+mkdir newdir            # Create directory
+touch file.txt          # Create empty file
+cp file1 file2          # Copy file
+mv old new              # Move or rename file
+rm -rf /path/to/file    # Delete file or directory (forcefully)
+find . -name "*.log"    # Find files with .log extension
+stat file.txt           # Get detailed file information
+
+File Content and Search
+cat file.txt            # View full file
+less file.txt           # View file with scroll
+head -n 20 file.txt     # First 20 lines
+tail -n 20 file.txt     # Last 20 lines
+tail -f file.log        # Follow log in real time
+grep "error" file.log   # Search for "error"
+awk '{print $1}' file   # Print first column of file
+sed 's/foo/bar/g' file  # Replace foo with bar
+cut -d':' -f1 /etc/passwd  # Cut fields by delimiter
+
