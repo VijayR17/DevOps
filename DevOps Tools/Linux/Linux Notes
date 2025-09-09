@@ -1,33 +1,4 @@
 #Essential commands for Linux.
-
-Package Management: 
-Debian/Ubuntu (APT-based):
-sudo apt update              # Update package list
-sudo apt upgrade             # Upgrade packages
-sudo apt install htop        # Install package
-sudo apt remove package      # Remove package
-
-RHEL/CentOS (YUM/DNF-based):
-sudo yum update              # Update system
-sudo yum install htop        # Install package
-sudo yum remove package      # Remove package
-df -h                  # Disk usage
-du -sh /var/log        # Size of directory
-
-System Monitoring & Information
-uname -a                # Full system info
-hostname                # Show hostname
-uptime                  # System uptime
-top                     # Real-time process monitoring
-htop                    # Enhanced 'top' (if installed)
-free -m                 # Memory usage (in MB)
-df -h                   # Disk space usage
-du -sh *                # Size of files/directories in current dir
-vmstat 1                # CPU and memory statistics
-lscpu                   # CPU architecture info
-lsblk                   # Block devices
-who                     # Who is logged in
-
 File and Directory Operations
 ls -lah                 # List all files with human-readable sizes
 cd /path/to/dir         # Change directory
@@ -87,4 +58,32 @@ getent group groupname          # View group members
 🔐 Sudo Access (Privilege Management)
 ➕ Give User Sudo Access
 usermod -aG sudo username       # Debian/Ubuntu
-usermod -aG wheel username      # RHEL/CentOS/Fedora
+
+Package Management: 
+Debian/Ubuntu (APT-based):
+sudo apt update              # Update package list
+sudo apt upgrade             # Upgrade packages
+sudo apt install htop        # Install package
+sudo apt remove package      # Remove package
+
+RHEL/CentOS (YUM/DNF-based):
+sudo yum update              # Update system
+sudo yum install htop        # Install package
+sudo yum remove package      # Remove package
+df -h                  # Disk usage
+du -sh /var/log        # Size of directory
+
+System Monitoring & Information
+uname -a                # Full system info
+hostname                # Show hostname
+uptime                  # System uptime
+top                     # Real-time process monitoring
+htop                    # Enhanced 'top' (if installed)
+free -m                 # Memory usage (in MB)
+df -h                   # Disk space usage
+du -sh *                # Size of files/directories in current dir
+vmstat 1                # CPU and memory statistics
+lscpu                   # CPU architecture info
+lsblk                   # Block devices
+who                     # Who is logged in
+
