@@ -73,9 +73,8 @@ Delete a Group
 groupdel devops
 
 Add User to a Group
-usermod -aG groupname username     # Add user to group (keep existing groups)
-gpasswd -a username groupname      # Alternative way to add user to group
-
+gpasswd -a username groupname      # add user to group
+gpasswd -M user1,user2,user3 groupname # add multiple users to group
 Remove User from a Group
 gpasswd -d username groupname
 
