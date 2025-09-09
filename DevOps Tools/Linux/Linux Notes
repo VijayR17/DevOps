@@ -51,3 +51,41 @@ awk '{print $1}' file   # Print first column of file
 sed 's/foo/bar/g' file  # Replace foo with bar
 cut -d':' -f1 /etc/passwd  # Cut fields by delimiter
 
+Add a New User
+adduser username              # Create a new user (interactive)
+useradd -m username           # Create user and home dir (non-interactive)
+passwd username               # Set password for the user
+
+Delete a User
+userdel username              # Delete user (keeps home dir)
+userdel -r username           # Delete user and home directory
+
+Modify an Existing User
+usermod -l newname oldname    # Change username
+usermod -d /new/home username # Change home directory
+usermod -s /bin/zsh username  # Change default shell
+
+Group Management
+Create a Group
+groupadd devops
+
+Delete a Group
+groupdel devops
+
+Add User to a Group
+usermod -aG groupname username     # Add user to group (keep existing groups)
+gpasswd -a username groupname      # Alternative way to add user to group
+
+Remove User from a Group
+gpasswd -d username groupname
+
+View User & Group Information
+id username                     # Show UID, GID, and groups of user
+groups username                 # Show all groups of a user
+getent passwd username          # View user info from passwd database
+getent group groupname          # View group members
+
+🔐 Sudo Access (Privilege Management)
+➕ Give User Sudo Access
+usermod -aG sudo username       # Debian/Ubuntu
+usermod -aG wheel username      # RHEL/CentOS/Fedora
