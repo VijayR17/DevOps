@@ -62,6 +62,9 @@ Read (4) + Write (2) + Execute (1) = 7.
 The first digit represents the Owner,
 The second digit represents the Group,
 The third digit represents Others.
+chmod 777 file or folder name  #777 is the permission we are giving to owner, group and others for specific file or folder
+sudo chown newowner file/folder  #To change owner of a file or folder, Sudo is used when you are not the root user.
+sudo chgrp newgroup file/folder  #To change group of a file or folder
 
 🔐 Sudo Access (Privilege Management)
 ➕ Give User Sudo Access
