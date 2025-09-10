@@ -55,6 +55,14 @@ groups username                 # Show all groups of a user
 getent passwd username          # View user info from passwd database
 getent group groupname          # View group members
 
+FILE PERMISSIONS
+Read (4) + Write (2) + Execute (1) = 7.
+
+777 means Read + Write + Execute permissions for the Owner, Group, and Others.
+The first digit represents the Owner,
+The second digit represents the Group,
+The third digit represents Others.
+
 🔐 Sudo Access (Privilege Management)
 ➕ Give User Sudo Access
 usermod -aG sudo username       # Debian/Ubuntu
