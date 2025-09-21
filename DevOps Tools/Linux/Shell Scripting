@@ -1,2 +1,57 @@
 Shell scripting is writing a sequence of commands for the shell to execute.
 It helps automate repetitive tasks like system monitoring, file manipulation, backups, and deployment etc.
+
+Basic Structure of a Shell Script
+#!/bin/bash   (#!/bin/bash: Shebang, tells the system which shell to use)
+# This is a comment
+echo "Hello, World!"   (#echo: Prints output)
+
+Always save the file as script.sh and make it executable.
+
+1. Variables
+name="Alice"
+echo "Hello, $name"
+
+2. User Input
+read -p "Enter your name: " username
+echo "Welcome, $username!"
+
+3. Conditionals
+if [ "$age" -ge 18 ]; then
+  echo "Adult"
+else
+  echo "Minor"
+fi
+
+4. Loops
+for file in *.txt; do
+  echo "File: $file"
+done
+
+5. Functions
+greet() {
+  echo "Hi $1!"
+}
+greet "Charlie"
+
+6. Command Line Arguments
+#!/bin/bash
+echo "First argument: $1"
+echo "Second argument: $2"
+
+
+Run as:
+
+./myscript.sh hello world
+
+
+🧪 Example: Backup Script
+#!/bin/bash
+backup_folder="/backup"
+source_folder="/home/user/documents"
+timestamp=$(date +%Y%m%d_%H%M%S)
+
+mkdir -p $backup_folder
+tar -czf $backup_folder/backup_$timestamp.tar.gz $source_folder
+
+echo "Backup completed at $timestamp"
